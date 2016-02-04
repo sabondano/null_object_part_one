@@ -1,4 +1,8 @@
 class NoSubscription
-  def charge(credit_card)
+  def has_mentoring?
+    false
+  end
+
+  def charge(_)
   end
 end

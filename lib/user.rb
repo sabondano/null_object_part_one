@@ -13,4 +13,10 @@ class User
   def price
     subscription.try(:price) || 0
   end
+
+  private
+
+  def subscription
+    @subscription || NoSubscription.new
+  end
 end

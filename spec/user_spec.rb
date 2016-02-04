@@ -15,8 +15,7 @@ describe User do
 
     it 'does nothing without a subscription' do
       credit_card = double('credit_card')
-      subscription = NoSubscription.new
-      user = User.new(subscription: subscription, credit_card: credit_card)
+      user = User.new(subscription: nil, credit_card: credit_card)
 
       expect { user.charge }.not_to raise_error
     end
